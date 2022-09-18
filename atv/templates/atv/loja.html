@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bom dia</h1>
+    <p>Clique na parte que deseja</p>
+    <br>
+    <p>Partes superior: </p>
+    <ul>
+        {% for Compra in s%}
+        <li>{{Compra.peca}} -{{Compra.cor}}</li>
+        {% endfor %}
+    </ul>
+    <br>
+    <p>Parte inferior: </p>
+    <ul>
+        {% for Compra1 in i%}
+        <li>{{Compra1.peca}} -{{Compra1.cor}}</li>
+        {% endfor %}
+    </ul>
+    <br>
+    <p>Chápeus/Bones/Toucas: </p>
+    <ul>
+        {% for Compra2 in c%}
+        <li>{{Compra2.peca}} -{{Compra2.cor}}</li>
+        {% endfor %}
+    </ul>
+    <br>
+    <p>Calçados: </p>
+    <ul>
+        {% for Compra3 in t%}
+        <li>{{Compra3.peca}} -{{Compra3.cor}}</li>
+        {% endfor %}
+    </ul>
+    <br>
+    <br>
+    <a href="{% url 'op1' %}">Opção 1</a>
+    <a href="{% url 'op2' %}">Opção 2</a>
+    <a href="{% url 'op3' %}">Opção 3</a>
+    <a href="{% url 'op4' %}">Opção 4</a>
+</body>
+</html>
